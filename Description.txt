@@ -1,0 +1,24 @@
+Shop description:
+
+Computer shop stores information about state of the warehouse (quantity), worth, equipment specification, providers. There may be many copies of the same equipment. when the good end we will get an alert.
+
+Equipment:
+-computer mice, keyboards, graphic cards, processors, monitors, cooling, casing, RAM, mainboards, drives, power supply.
+
+This is typical equipment sold in a computer store.
+It is small, nice store with three emplyees: the manager and two sellers. The manager may change the prices of goods. The seller sells goods to clients, in this role there may be a manager, who may also be a seller.
+
+When we sell a good, its number(state) changes. The manager places orders with suppliers.
+
+The history of customer orders is collected. The seller can add customers and assign purchases to customers. The manager can edit the order in case of returning the goods. We assign a specific seller to a given purchase.
+
+Entities:
+-categories(id_category PK, category_name)
+-client(id_client PK, client_name, surname, pesel, telephone_contact)
+-dealer(id_dealer PK, dealer_name, surname, position)
+-product(id_product PK, id_category FK, manufacturerm product_name, description, price, amount, how_many_to_alert, id_supplier FK)
+-supplier(id_supplier PK, supplier_name, telephone_contact)
+-order(id_order, id_client, id_dealer, id_product, quantity, orderDate)
+
+Diagram in *.xml format can be opened on:
+www.draw.io

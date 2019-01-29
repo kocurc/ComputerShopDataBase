@@ -1,0 +1,1 @@
+CREATE INDEX manufacturer_index ON product (manufacturer);
